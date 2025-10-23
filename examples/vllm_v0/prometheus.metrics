@@ -1,0 +1,94 @@
+# HELP nv_llm_http_service_inflight_requests Number of inflight requests
+# TYPE nv_llm_http_service_inflight_requests gauge
+nv_llm_http_service_inflight_requests{model="fb3637a1165cec3832958bd72ebbe04021601489"} 100
+# HELP nv_llm_http_service_input_sequence_tokens Input sequence length in tokens
+# TYPE nv_llm_http_service_input_sequence_tokens histogram
+nv_llm_http_service_input_sequence_tokens_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="0"} 0
+nv_llm_http_service_input_sequence_tokens_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="50"} 0
+nv_llm_http_service_input_sequence_tokens_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="100"} 6
+nv_llm_http_service_input_sequence_tokens_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="500"} 117
+nv_llm_http_service_input_sequence_tokens_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="1000"} 117
+nv_llm_http_service_input_sequence_tokens_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="2000"} 117
+nv_llm_http_service_input_sequence_tokens_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="4000"} 117
+nv_llm_http_service_input_sequence_tokens_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="8000"} 117
+nv_llm_http_service_input_sequence_tokens_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="16000"} 117
+nv_llm_http_service_input_sequence_tokens_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="32000"} 117
+nv_llm_http_service_input_sequence_tokens_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="64000"} 117
+nv_llm_http_service_input_sequence_tokens_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="128000"} 117
+nv_llm_http_service_input_sequence_tokens_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="+Inf"} 117
+nv_llm_http_service_input_sequence_tokens_sum{model="fb3637a1165cec3832958bd72ebbe04021601489"} 13286
+nv_llm_http_service_input_sequence_tokens_count{model="fb3637a1165cec3832958bd72ebbe04021601489"} 117
+# HELP nv_llm_http_service_inter_token_latency_seconds Inter-token latency in seconds
+# TYPE nv_llm_http_service_inter_token_latency_seconds histogram
+nv_llm_http_service_inter_token_latency_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="0"} 0
+nv_llm_http_service_inter_token_latency_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="0.001"} 33
+nv_llm_http_service_inter_token_latency_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="0.005"} 33
+nv_llm_http_service_inter_token_latency_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="0.01"} 33
+nv_llm_http_service_inter_token_latency_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="0.015"} 33
+nv_llm_http_service_inter_token_latency_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="0.02"} 63
+nv_llm_http_service_inter_token_latency_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="0.025"} 3153
+nv_llm_http_service_inter_token_latency_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="0.05"} 4037
+nv_llm_http_service_inter_token_latency_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="0.1"} 4037
+nv_llm_http_service_inter_token_latency_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="0.25"} 4037
+nv_llm_http_service_inter_token_latency_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="0.5"} 4037
+nv_llm_http_service_inter_token_latency_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="1"} 4037
+nv_llm_http_service_inter_token_latency_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="2"} 4037
+nv_llm_http_service_inter_token_latency_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="+Inf"} 4037
+nv_llm_http_service_inter_token_latency_seconds_sum{model="fb3637a1165cec3832958bd72ebbe04021601489"} 92.28685717099977
+nv_llm_http_service_inter_token_latency_seconds_count{model="fb3637a1165cec3832958bd72ebbe04021601489"} 4037
+# HELP nv_llm_http_service_output_sequence_tokens Output sequence length in tokens
+# TYPE nv_llm_http_service_output_sequence_tokens histogram
+nv_llm_http_service_output_sequence_tokens_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="0"} 0
+nv_llm_http_service_output_sequence_tokens_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="50"} 94
+nv_llm_http_service_output_sequence_tokens_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="100"} 97
+nv_llm_http_service_output_sequence_tokens_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="500"} 97
+nv_llm_http_service_output_sequence_tokens_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="1000"} 97
+nv_llm_http_service_output_sequence_tokens_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="2000"} 97
+nv_llm_http_service_output_sequence_tokens_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="4000"} 97
+nv_llm_http_service_output_sequence_tokens_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="8000"} 97
+nv_llm_http_service_output_sequence_tokens_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="16000"} 97
+nv_llm_http_service_output_sequence_tokens_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="32000"} 97
+nv_llm_http_service_output_sequence_tokens_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="+Inf"} 97
+nv_llm_http_service_output_sequence_tokens_sum{model="fb3637a1165cec3832958bd72ebbe04021601489"} 3781
+nv_llm_http_service_output_sequence_tokens_count{model="fb3637a1165cec3832958bd72ebbe04021601489"} 97
+# HELP nv_llm_http_service_request_duration_seconds Duration of LLM requests
+# TYPE nv_llm_http_service_request_duration_seconds histogram
+nv_llm_http_service_request_duration_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="0"} 0
+nv_llm_http_service_request_duration_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="1"} 2
+nv_llm_http_service_request_duration_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="2"} 24
+nv_llm_http_service_request_duration_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="4"} 69
+nv_llm_http_service_request_duration_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="8"} 97
+nv_llm_http_service_request_duration_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="16"} 97
+nv_llm_http_service_request_duration_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="32"} 97
+nv_llm_http_service_request_duration_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="64"} 97
+nv_llm_http_service_request_duration_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="128"} 97
+nv_llm_http_service_request_duration_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="256"} 97
+nv_llm_http_service_request_duration_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="+Inf"} 97
+nv_llm_http_service_request_duration_seconds_sum{model="fb3637a1165cec3832958bd72ebbe04021601489"} 310.11499497799997
+nv_llm_http_service_request_duration_seconds_count{model="fb3637a1165cec3832958bd72ebbe04021601489"} 97
+# HELP nv_llm_http_service_requests_total Total number of LLM requests processed
+# TYPE nv_llm_http_service_requests_total counter
+nv_llm_http_service_requests_total{endpoint="completions",model="fb3637a1165cec3832958bd72ebbe04021601489",request_type="stream",status="success"} 97
+# HELP nv_llm_http_service_time_to_first_token_seconds Time to first token in seconds
+# TYPE nv_llm_http_service_time_to_first_token_seconds histogram
+nv_llm_http_service_time_to_first_token_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="0"} 0
+nv_llm_http_service_time_to_first_token_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="0.001"} 0
+nv_llm_http_service_time_to_first_token_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="0.005"} 0
+nv_llm_http_service_time_to_first_token_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="0.01"} 0
+nv_llm_http_service_time_to_first_token_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="0.025"} 0
+nv_llm_http_service_time_to_first_token_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="0.05"} 0
+nv_llm_http_service_time_to_first_token_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="0.1"} 0
+nv_llm_http_service_time_to_first_token_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="0.25"} 0
+nv_llm_http_service_time_to_first_token_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="0.5"} 8
+nv_llm_http_service_time_to_first_token_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="1"} 19
+nv_llm_http_service_time_to_first_token_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="2"} 42
+nv_llm_http_service_time_to_first_token_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="5"} 117
+nv_llm_http_service_time_to_first_token_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="10"} 117
+nv_llm_http_service_time_to_first_token_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="30"} 117
+nv_llm_http_service_time_to_first_token_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="60"} 117
+nv_llm_http_service_time_to_first_token_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="120"} 117
+nv_llm_http_service_time_to_first_token_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="240"} 117
+nv_llm_http_service_time_to_first_token_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="480"} 117
+nv_llm_http_service_time_to_first_token_seconds_bucket{model="fb3637a1165cec3832958bd72ebbe04021601489",le="+Inf"} 117
+nv_llm_http_service_time_to_first_token_seconds_sum{model="fb3637a1165cec3832958bd72ebbe04021601489"} 303.87568271900017
+nv_llm_http_service_time_to_first_token_seconds_count{model="fb3637a1165cec3832958bd72ebbe04021601489"} 117

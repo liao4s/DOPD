@@ -1,0 +1,10 @@
+---
+source: tests/openai_completions.rs
+description: "should have prompt, model, and max_tokens fields"
+expression: sample.request
+---
+{
+  "max_tokens": 10,
+  "model": "gpt-3.5-turbo",
+  "prompt": "What is the meaning of life?"
+}

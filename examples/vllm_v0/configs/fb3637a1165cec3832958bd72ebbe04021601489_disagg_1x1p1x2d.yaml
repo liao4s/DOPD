@@ -1,0 +1,67 @@
+
+Common:
+  model: /models/hub/models--neuralmagic--DeepSeek-R1-Distill-Llama-70B-FP8-dynamic/snapshots/fb3637a1165cec3832958bd72ebbe04021601489
+  block-size: 128
+  max-model-len: 16384
+  kv-transfer-config: '{"kv_connector":"DynamoNixlConnector"}'
+
+Frontend:
+  served_model_name: fb3637a1165cec3832958bd72ebbe04021601489
+  endpoint_chat: dynamo.Processor.chat/completions
+  endpoint_completion: dynamo.Processor.completions
+  port: 8000
+
+Processor:
+  router: round-robin
+  common-configs: [model, block-size]
+
+VllmWorker:
+  remote-prefill: true
+  conditional-disagg: False
+  max-local-prefill-length: 511
+  max-prefill-queue-size: 16
+  tensor-parallel-size: 2
+  gpu-memory-utilization: 0.96
+  ServiceArgs:
+    workers: 1
+    resources:
+      gpu: 2
+  common-configs: [model, block-size, max-model-len, kv-transfer-config]
+
+PrefillWorker:
+  tensor-parallel-size: 1
+  gpu-memory-utilization: 0.98
+  # priority-queue: short
+  ServiceArgs:
+    workers: 1
+    resources:
+      gpu: 1
+  common-configs: [model, block-size, max-model-len, kv-transfer-config]
+        
+
+Prometheus:
+  global:
+    scrape_interval: 5s
+  scrape_configs:
+    - job_name: 'prometheus'
+      static_configs:
+        - targets: ['localhost:9090']
+    - job_name: 'frontend'
+      static_configs:
+        - targets: ['10.200.1.2:8000']
+
+Planner:
+  adjustment-interval: 10
+  environment: "local"
+  no-operation: False
+  profile-results-dir: "/workspace/dynamo-eval/tmp"
+  isl: 1000
+  osl: 200
+  ttft: 1.5
+  itl: 0.05
+  load-predictor: "arima"
+  decode-engine-num-gpu: 2
+  prefill-engine-num-gpu: 1
+  max-gpu-budget: 5
+  type-planner: "planner_dopd"
+        

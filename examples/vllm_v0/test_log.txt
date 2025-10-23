@@ -1,0 +1,12 @@
+╭───────────────────── Dynamo Serve ──────────────────────╮
+│ Starting Dynamo service: graphs.disagg_planner:Frontend │
+╰─────────────────────────────────────────────────────────╯
+<builtins.Endpoint object at 0x7ff82d448030>
+<builtins.Endpoint object at 0x7f711b2db550>
+Backend UCX was instantiated
+Initialized NIXL agent: 62fdb20a-b5cc-417e-9636-2c3a30b522b1
+Backend UCX was instantiated
+Initialized NIXL agent: eb32c4ac-949f-48ac-8225-d6c872a85b7c
+[AKing info] GPU 6 memory_info.used / memory_info.total > 0.2, set gpu.available = False
+[AKing info] GPU 6 memory_info.used / memory_info.total > 0.2, set gpu.available = False
+[AKing info] self.remaining_gpus is 7

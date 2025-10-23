@@ -1,0 +1,79 @@
+# SPDX-FileCopyrightText: Copyright (c) 2025 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+# SPDX-License-Identifier: Apache-2.0
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+[workspace]
+# empty workspace to exclude from top level workspace
+# excluded due to pyo3 extension module build issues
+
+[package]
+name = "dynamo-py3"
+version = "0.3.1"
+edition = "2021"
+authors = ["NVIDIA"]
+license = "Apache-2.0"
+homepage = "https://github.com/ai-dynamo/dynamo"
+repository = "https://github.com/ai-dynamo/dynamo.git"
+
+[lib]
+path = "rust/lib.rs"
+name = "_core"
+# "cdylib" is necessary to produce a shared library for Python to import from.
+# "rlib" is necessary to support doctests.
+crate-type = ["cdylib", "rlib"]
+
+[features]
+default = []
+block-manager = ["dynamo-llm/block-manager", "dep:dlpark"]
+
+[dependencies]
+dynamo-llm = { path = "../../llm" }
+dynamo-runtime = { path = "../../runtime" }
+
+anyhow = { version = "1" }
+async-openai = { version = "0.29.0" }
+async-stream = { version = "0.3" }
+async-trait = { version = "0.1" }
+futures = { version = "0.3" }
+once_cell = { version = "1.20.3" }
+serde = { version = "1" }
+serde_json = { version = "1.0.138" }
+thiserror = { version = "2.0" }
+tokio = { version = "1", features = ["full"] }
+tokio-stream = { version = "0" }
+tokio-util = { version = "0.7" }
+tracing = { version = "0" }
+tracing-subscriber = { version = "0.3", features = ["fmt", "env-filter"] }
+
+# "extension-module" tells pyo3 we want to build an extension module (skips linking against libpython.so)
+# "abi3-py39" tells pyo3 (and maturin) to build using the stable ABI with minimum Python version 3.9
+pyo3 = { version = "0.23.4", default-features = false, features = [
+  "macros",
+  "experimental-async",
+  "experimental-inspect",
+  "extension-module",
+  "py-clone",
+] }
+
+pyo3-async-runtimes = { version = "0.23.0", default-features = false, features = [
+  "attributes",
+  "testing",
+  "tokio-runtime",
+  "unstable-streams",
+] }
+
+pythonize = "0.23"
+
+dlpark = { version = "0.5", features = ["pyo3", "half"], optional = true }
+
